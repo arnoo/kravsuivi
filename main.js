@@ -30,6 +30,7 @@ $("div.button_comment").click(function (evt) {
 					return;
 					}
 				comment_comment = $(this).data("comment");
+				$("#comment textarea").val(comment_comment);
 				$('#comment_date').text($(this).data("date"));
 				$('#comment').css("top", ($(window).height()/2-200)+"px")
 					     .css("left", ($(window).width()/2-250)+"px")
