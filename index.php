@@ -1,24 +1,40 @@
 <?php
 
-$lesson = array('id' => 'creteil_avance',
-	        'belts' => array('yellow'),
-		'name' => "Cours Avancés Créteil 2013-2014",
-                'days_of_week' => array(2,4),
-                'start_date' => "2013-09-10",
-		'teachers' => array("Jérôme", "Cédric", "Arnaud"),
-		'end_date' => "2014-06-20",
-		'locale' => 'fr_FR',
-		);
+$lessons = array('creteil_avance_2013' => array('belts' => array('yellow'),
+						'name' => "Cours Avancés Créteil 2013-2014",
+                				'days_of_week' => array(2,4),
+                				'start_date' => "2013-09-10",
+						'end_date' => "2014-06-20",
+						'teachers' => array("Jérôme", "Cédric", "Arnaud"),
+						'locale' => 'fr_FR',
+						));
+
+if (!isset($_GET['cours']))
+	{
+	print "Id cours manquant";
+	die;
+	}
+else
+	{
+	$lesson_id = $_GET['cours'];
+	if (!isset($lessons[$lesson_id]))
+		{
+		print "Cours '$lesson_id' introuvable";
+		die;
+		}
+	$lesson = $lessons[$lesson_id];
+	}
 
 setlocale(LC_TIME, $lesson['locale'].'.utf8');
 
-$db_fname = 'db_'.$lesson['id'].'.sqlite3';
-if (!file_exists($db_fname)) {
+$db_fname = 'db_'.$lesson_id.'.sqlite3';
+if (!file_exists($db_fname))
+	{
 	$db = new SQLite3($db_fname);
 	$db->exec("CREATE TABLE teachers ( day CHAR(8), teacher VARCHAR(50), PRIMARY KEY (day, teacher))");
 	$db->exec("CREATE TABLE techniques ( day CHAR(8), technique_id VARCHAR(50), PRIMARY KEY (day, technique_id))");
 	$db->exec("CREATE TABLE comments ( day CHAR(8) PRIMARY KEY, comment TEXT)");
-}
+	}
 $db = new SQLite3($db_fname);
 
 if ($_POST)
