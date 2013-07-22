@@ -1,0 +1,112 @@
+html, body
+	{
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	}
+
+#main_table
+	{
+	table-layout: fixed;
+	width: 100%;
+	*margin-left: -150px;/*ie7*/
+	height: 80%;
+	}
+
+td, th
+	{
+	vertical-align: top;
+	border-top: 1px solid #ccc;
+	padding:10px;
+	width:50px;
+	}
+
+td.future
+	{
+	background-color: grey;
+	}
+
+th
+	{
+	position:absolute;
+	*position: relative; /*ie7*/
+	left:0;
+	width:200px;
+	}
+
+.outer
+	{
+	position:relative
+	}
+
+.inner
+	{
+	overflow-x:scroll;
+	overflow-y:visible;
+	width:80%;
+	margin-left:200px;
+	}
+
+.button_comment
+	{
+	cursor: pointer;
+	width: 40px;
+	height: 40px;
+	background-image: url('uncomment.png');
+	background-size: 40px 40px;
+	}
+
+.button_comment.checked
+	{
+	background-image: url('comment.png');
+	background-size: 40px 40px;
+	}
+
+.technique {
+	cursor: pointer;
+	width: 40px;
+	height: 40px;
+	background-image: url('unchecked.png');
+	background-size: 40px 40px;
+	}
+
+.technique.checked
+	{
+	background-image: url('checked.png');
+	background-size: 40px 40px;
+	}
+
+div#comment
+	{
+	display: none;
+	position: absolute;
+	width:	400px;
+	height:	300px;
+	z-index: 30;
+	border: 2px solid black;
+	border-radius: 5px;
+	background-color: white;
+	}
+
+span#comment_close
+	{
+	font-weight: bold;
+	margin-right: 10px;
+	margin-top: 10px;
+	float:right;
+	display:block;
+	cursor: pointer;
+	}
+
+div#comment textarea
+	{
+	width: 100%;
+	height: 200px;
+	}
+
+h2
+	{
+	margin-left: 13px;
+	margin-top: 13px;
+	font-size: 15px;
+	}

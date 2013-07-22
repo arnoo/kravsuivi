@@ -6,7 +6,11 @@ $lesson = array('id' => 'creteil_avance',
                 'days_of_week' => array(2,4),
                 'start_date' => "2013-09-10",
 		'teachers' => array("Jérôme", "Cédric", "Arnaud"),
-                'end_date' => "2014-06-20");
+		'end_date' => "2014-06-20",
+		'locale' => 'fr_FR',
+		);
+
+setlocale(LC_TIME, $lesson['locale'].'.utf8');
 
 $db_fname = 'db_'.$lesson['id'].'.sqlite3';
 if (!file_exists($db_fname)) {
@@ -67,9 +71,8 @@ if ($_POST)
 				{
 				$stmt = $db->prepare("DELETE FROM comments WHERE day=:day");
 				$stmt->bindValue(':day', $day);
-				$stmt->bindValue(':comment', $comment);
 				$stmt->execute();
-				if (preg_match("/^\s*$/", $comment))
+				if (!preg_match("/^\s*$/", $comment))
 					{
 					$stmt = $db->prepare("INSERT INTO comments (day, comment) VALUES (:day, :comment)");
 					$stmt->bindValue(':day', $day);
@@ -91,68 +94,8 @@ $belt_techniques = json_decode(file_get_contents("belts.json"), true);
 <html>
 	<head>
 		<title><?php echo $lesson['name']; ?></title>
-		<style type='text/css'>
-			html, body { width: 100%; padding: 0; margin: 0;}
-
-			#main_table {
-			  table-layout: fixed; 
-			  width: 100%;
-			  *margin-left: -50px;/*ie7*/
-			  height: 80%;
-			}
-			td, th {
-			  vertical-align: top;
-			  border-top: 1px solid #ccc;
-			  padding:10px;
-			  width:50px;
-			}
-			td.future { background-color: grey; }	
-			th {
-			  position:absolute;
-			  *position: relative; /*ie7*/
-			  left:0; 
-			  width:50px;
-			}
-			.outer {position:relative}
-			.inner {
-				  overflow-x:scroll;
-				    overflow-y:visible;
-				    width:90%; 
-				      margin-left:100px;
-			}
-			.button_comment {
-				width: 40px;
-				height: 40px;
-				background-image: url('uncomment.png');
-				background-size: 40px 40px;
-			}
-			.button_comment.checked {
-				background-image: url('comment.png');
-				background-size: 40px 40px;
-			}
-			.technique {
-				width: 40px;
-				height: 40px;
-				background-image: url('unchecked.png');
-				background-size: 40px 40px;
-			}
-			.technique.checked {
-				background-image: url('checked.png');
-				background-size: 40px 40px;
-			}
-			div#comment {
-				display: none;
-				position: absolute;
-				left:	30%;
-				top:	30%;
-				width:	40%;
-				height:	40%;
-				z-index: 30;
-				border: 2px solid black;
-				border-radius: 5px;
-			}
-		</style>
 		<script src="jquery-1.7.1.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
 	<h1><?php echo $lesson['name']; ?></h1>
@@ -173,7 +116,7 @@ for ($i=0; $i<365; $i++) {
 			{
 			print " class='future'";
 			}
-		print ">".date('D d M', $i_time)."</td>";
+		print ">".strftime('%a %e %b', $i_time)."</td>";
 		$lesson_ids[] = date('Ymd', $i_time);
 	}
 }
@@ -213,7 +156,7 @@ foreach ($lesson_ids as $lesson_id)
 		{
 		print " checked' data-comment='".htmlspecialchars($comm['comment']);
 		}
-	print "' data-day='$lesson_id'>&nbsp;</div></td>";
+	print "' data-date='".strftime('%a %e %b', strtotime($lesson_id))."' data-day='$lesson_id'>&nbsp;</div></td>";
 	}
 print "</thead><tbody>";
 foreach ($lesson['belts'] as $belt)
@@ -244,7 +187,7 @@ foreach ($lesson['belts'] as $belt)
 	}
 print "</table></div></div>\n";
 print "<button id='save_changes'>Sauvegarder les changements</button>";
-print "<div id='comment'><textarea></textarea></div>";
+print "<div id='comment'><span id='comment_close'>x</span><h2>Commentaire pour le <span id='comment_date'>22 avril</span></h2><textarea></textarea></div>";
 
 ?>
 
