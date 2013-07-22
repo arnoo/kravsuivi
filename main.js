@@ -10,7 +10,8 @@ function save_comment(day)
 	var comment = $("#comment textarea").val();
 	if (comment_day!==null && comment_comment!==comment)
 		{
-		$("div.button_comment[data-day='"+comment_day+"']").data("comment", comment);
+		$("div.button_comment[data-day='"+comment_day+"']").data("comment", comment)
+								   .toggleClass("checked", comment!=='');
 		if (changes["comments"]==undefined)
 			{
 			changes["comments"] = {};
