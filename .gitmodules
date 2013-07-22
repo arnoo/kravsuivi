@@ -1,0 +1,3 @@
+[submodule "belts"]
+	path = belts
+	url = git@github.com:arnoo/fekm_belts_json.git

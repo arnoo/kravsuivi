@@ -88,7 +88,7 @@ $sql_technique = 'SELECT * FROM techniques WHERE day=:day AND technique_id=:tech
 $sql_teacher = 'SELECT * FROM teachers WHERE day=:day AND teacher=:teacher';
 $sql_comment = 'SELECT * FROM comments WHERE day=:day';
 
-$belt_techniques = json_decode(file_get_contents("belts.json"), true);
+$belt_techniques = json_decode(file_get_contents("belts/belts.json"), true);
 
 ?>
 <html>
