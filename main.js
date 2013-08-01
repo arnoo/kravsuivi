@@ -74,8 +74,8 @@ $("button#save_changes").click(function (evt) {
 		$.post("", changes, function ()
 					{
 					changes = {};
-					button.text("Sauvegarder les changements").attr("disabled", null);
-					alert("Changements sauvegardés.");
+					button.text("Changements sauvegardés !").attr("disabled", null);
+					window.setTimeout(function () { button.text("Sauvegarder les changements"); }, 2000);
 					});
 		});
 
@@ -84,3 +84,21 @@ $("span#comment_close").click(function (evt) {
 		save_comment();
 		});
 
+var syncing_scroll = false;
+$(".inner").scroll(function (evt)
+			{
+			if (syncing_scroll) { return false; }
+			syncing_scroll = true;
+			var other = $('#inner_main');
+			if ($(this).attr('id')=='inner_main') {
+				other = $('#inner_head');
+			}
+			other.scrollLeft($(this).scrollLeft());
+			syncing_scroll = false;
+			});
+
+$(document).ready(function ()
+			{
+			var height = $(window).height();
+			$("#outer_main").height((height-400)+"px");
+			});

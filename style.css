@@ -5,14 +5,15 @@ html, body
 	margin: 0;
 	}
 
-#main_table
+#main_table, #head_table
 	{
 	table-layout: fixed;
 	width: 100%;
 	*margin-left: -150px;/*ie7*/
 	}
 
-#main_table td, th
+#main_table td, #main_table th,
+#head_table td, #head_table th
 	{
 	vertical-align: top;
 	border-top: 1px solid #ccc;
@@ -20,12 +21,14 @@ html, body
 	width:50px;
 	}
 
-#main_table td.future
+#main_table td.future,
+#head_table td.future
 	{
 	background-color: grey;
 	}
 
-#main_table th
+#main_table th,
+#head_table th
 	{
 	position:absolute;
 	*position: relative; /*ie7*/
@@ -33,16 +36,23 @@ html, body
 	width:200px;
 	}
 
-.outer
+#outer_head
 	{
 	position:relative;
-	height: 80%;
+	height: 300px;
+	}
+
+#outer_main
+	{
+	position:relative;
+	height: 20%;
+	overflow-y:scroll;
 	}
 
 .inner
 	{
 	overflow-x:scroll;
-	overflow-y:scroll;
+	overflow-y:hidden;
 	width:80%;
 	margin-left:200px;
 	}
@@ -110,4 +120,10 @@ h2
 	margin-left: 13px;
 	margin-top: 13px;
 	font-size: 15px;
+	}
+
+button#save_changes
+	{
+	float:	right;
+	margin-right: 30px;
 	}

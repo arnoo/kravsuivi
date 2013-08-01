@@ -114,10 +114,11 @@ $belt_techniques = json_decode(file_get_contents("belts/belts.json"), true);
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
+	<button id='save_changes'>Sauvegarder les changements</button>
 	<h1><?php echo $lesson['name']; ?></h1>
 
-	<div class='outer'><div class='inner'>
-	<table id="main_table"><thead>
+	<div id='outer_head'><div id='inner_head' class='inner'>
+	<table id="head_table"><thead>
 		<tr><th></th>
 <?php
 $lesson_start_time = strtotime($lesson['start_date']);
@@ -167,14 +168,16 @@ foreach ($lesson_ids as $lesson_id)
 	$stmt_comment = $db->prepare($sql_comment);
 	$stmt_comment->bindValue(':day', $lesson_id);
 	$result_comment = $stmt_comment->execute();
-	print "<td><div class='button_comment";
+	print "<td><div title='Cliquer pour voir/modifier le commentaire' class='button_comment";
 	if ($comm = $result_comment->fetchArray())
 		{
 		print " checked' data-comment='".htmlspecialchars($comm['comment']);
 		}
 	print "' data-date='".strftime('%a %e %b', strtotime($lesson_id))."' data-day='$lesson_id'>&nbsp;</div></td>";
 	}
-print "</thead><tbody>";
+print "</thead></table></div></div>
+	<div id='outer_main'><div id='inner_main' class='inner'>
+	<table id='main_table'><tbody>";
 foreach ($lesson['belts'] as $belt)
 	{
 	foreach ($belt_techniques[$belt]['techniques'] as $technique_id => $technique)
@@ -202,7 +205,6 @@ foreach ($lesson['belts'] as $belt)
 		}
 	}
 print "</table></div></div>\n";
-print "<button id='save_changes'>Sauvegarder les changements</button>";
 print "<div id='comment'><span id='comment_close'>x</span><h2>Commentaire pour le <span id='comment_date'>22 avril</span></h2><textarea></textarea></div>";
 
 ?>
