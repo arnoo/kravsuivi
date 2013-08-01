@@ -69,7 +69,14 @@ $("input.teacher").change(function (evt)
 
 $("button#save_changes").click(function (evt) {
 		save_comment();
-		$.post("", changes, function () {changes = {};});
+		var button = $(this);
+		button.text("Sauvegarde en cours...").attr("disabled", true);
+		$.post("", changes, function ()
+					{
+					changes = {};
+					button.text("Sauvegarder les changements").attr("disabled", null);
+					alert("Changements sauvegardés.");
+					});
 		});
 
 $("span#comment_close").click(function (evt) {

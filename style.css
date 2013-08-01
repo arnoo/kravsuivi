@@ -10,10 +10,9 @@ html, body
 	table-layout: fixed;
 	width: 100%;
 	*margin-left: -150px;/*ie7*/
-	height: 80%;
 	}
 
-td, th
+#main_table td, th
 	{
 	vertical-align: top;
 	border-top: 1px solid #ccc;
@@ -21,12 +20,12 @@ td, th
 	width:50px;
 	}
 
-td.future
+#main_table td.future
 	{
 	background-color: grey;
 	}
 
-th
+#main_table th
 	{
 	position:absolute;
 	*position: relative; /*ie7*/
@@ -36,13 +35,14 @@ th
 
 .outer
 	{
-	position:relative
+	position:relative;
+	height: 80%;
 	}
 
 .inner
 	{
 	overflow-x:scroll;
-	overflow-y:visible;
+	overflow-y:scroll;
 	width:80%;
 	margin-left:200px;
 	}
