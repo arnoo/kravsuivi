@@ -1,7 +1,7 @@
 <?php
 
 $lessons = array('creteil_avance_2013' => array('belts' => array('yellow'),
-						'name' => "Cours Avancés Créteil 2013-2014",
+						'name' => "Avancés Créteil 2013-2014",
                 				'days_of_week' => array(2,4),
                 				'start_date' => "2013-09-10",
 						'end_date' => "2014-06-20",
@@ -135,7 +135,7 @@ $belt_techniques = json_decode(file_get_contents("belts/belts.json"), true);
 	</head>
 	<body>
 	<button id='save_changes'>Sauvegarder les changements</button>
-	<h1><?php echo $lesson['name']; ?></h1>
+	<h1>Suivi des cours : <?php echo $lesson['name']; ?></h1>
 
 	<div id='outer_head'><div id='inner_head' class='inner'>
 	<table id="head_table"><thead>

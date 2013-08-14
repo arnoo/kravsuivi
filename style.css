@@ -5,6 +5,19 @@ html, body
 	margin: 0;
 	}
 
+h1
+	{
+	vertical-align: center;
+	padding-left: 110px;
+	display: block;
+	height:	40px;
+	padding-top:10px;
+	background-image: url('logo_fekm_small.png');
+	background-repeat: no-repeat;
+	background-position: 10px 50%;
+	font-size: 30px;
+	}
+
 #main_table, #head_table
 	{
 	table-layout: fixed;

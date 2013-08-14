@@ -126,11 +126,17 @@ $(".inner").scroll(function (evt)
 			syncing_scroll = false;
 			});
 
+function update_height()
+	{
+	var height = $(window).height();
+	$("#outer_main").height((height-300)+"px");
+	}
+
 $(document).ready(function ()
 			{
-			var height = $(window).height();
-			$("#outer_main").height((height-300)+"px");
+			update_height();
 			$(".button_comment").each(function () {update_teachers(this);});
+			$(window).resize(update_height);
 			});
 
 function update_teachers(comment_button)
