@@ -5,6 +5,7 @@ var changes = {};
 var comment_comment;
 var comment_button;
 var comment_day = null;
+var comment_div = $("div#comment");
 
 function save_comment(day)
 	{
@@ -44,8 +45,23 @@ $("div.button_comment").click(function (evt) {
 					}
 				$('#comment').css("top", ($(window).height()/2-200)+"px")
 					     .css("left", ($(window).width()/2-250)+"px")
-					     .show();
+					     .show()
+					     .focus();
 				});
+
+// Pris de jquery.ui Dialog : fermer la fenetre de commentaire si on appuie sur Echap
+// setting tabIndex makes the div focusable
+// setting outline to 0 prevents a border on focus in Mozilla
+comment_div.attr('tabIndex', -1)
+           .css('outline', 0)
+           .keydown(function(event)
+			{
+	                if (event.keyCode && event.keyCode === 27 && comment_div.is(':visible'))
+				{
+				comment_div.hide();
+				save_comment();
+				}
+			});
 
 $("div.technique").click(function (evt)
 		    		{
@@ -93,7 +109,7 @@ $("button#save_changes").click(function (evt) {
 		});
 
 $("span#comment_close").click(function (evt) {
-		$("div#comment").hide();
+		comment_div.hide();
 		save_comment();
 		});
 
