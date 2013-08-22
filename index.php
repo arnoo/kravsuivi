@@ -27,7 +27,7 @@ else
 
 setlocale(LC_TIME, $lesson['locale'].'.utf8');
 
-$db_fname = 'db_'.$lesson_id.'.sqlite3';
+$db_fname = 'data/db_'.$lesson_id.'.sqlite3';
 if (!file_exists($db_fname))
 	{
 	$db = new SQLite3($db_fname);
