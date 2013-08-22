@@ -1,5 +1,15 @@
 <?php
 
+if (!defined('DOKU_COOKIE')) define('DOKU_COOKIE', 'DW'.md5('kravcookiewiki'));
+session_name("DokuWiki");
+@session_start();
+if (!isset($_SESSION[DOKU_COOKIE]) || !isset($_SESSION[DOKU_COOKIE]['auth']))
+	{
+	print "Vous devez être connecté via le wiki pour accéder à cette page.";
+	print "<a href='http://wiki.ekmc.fr/'>Retour au wiki</a>";
+	die;
+	}
+
 $lessons = array('creteil_avance_2013' => array('belts' => array('yellow'),
 						'name' => "Avancés Créteil 2013-2014",
                 				'days_of_week' => array(2,4),
