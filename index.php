@@ -10,14 +10,7 @@ if (!isset($_SESSION[DOKU_COOKIE]) || !isset($_SESSION[DOKU_COOKIE]['auth']))
 	die;
 	}
 
-$lessons = array('creteil_avance_2013' => array('belts' => array('yellow'),
-						'name' => "Avancés Créteil 2013-2014",
-                				'days_of_week' => array(2,4),
-                				'start_date' => "2013-09-10",
-						'end_date' => "2014-06-20",
-						'teachers' => array("Jérôme", "Cédric", "Arnaud"),
-						'locale' => 'fr_FR',
-						));
+require_once('config.php');
 
 if (!isset($_GET['cours']))
 	{
@@ -134,7 +127,7 @@ if ($_POST)
 $sql_technique = 'SELECT * FROM techniques WHERE day=:day AND technique_id=:techid';
 $sql_comment = 'SELECT * FROM comments WHERE day=:day';
 
-$belt_techniques = json_decode(file_get_contents("belts/belts.json"), true);
+$belt_techniques = json_decode(file_get_contents("belts.json"), true);
 
 ?>
 <html>
@@ -229,7 +222,7 @@ foreach ($lesson['belts'] as $belt)
 	foreach ($belt_techniques[$belt]['techniques'] as $technique_id => $technique)
 		{
 		print "<tr><th>";
-		print "<div style='float:left; width:10px; background-color:$belt;'>&nbsp;</div>";
+		print "<div style='float:left; width:10px; background-color:".$belt_techniques[$belt]['en'].";'>&nbsp;</div>";
 		print $technique['fr'];
 		print "</th>";
 		foreach($lesson_ids as $lesson_id)

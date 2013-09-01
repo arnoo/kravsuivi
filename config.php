@@ -1,0 +1,28 @@
+<?php
+
+$lessons = array(
+		'creteil_avances_2013' => array('belts' => array('marron', 'noire'),
+						'name' => "Avancés Créteil 2013-2014",
+                				'days_of_week' => array(2,4),
+                				'start_date' => "2013-09-10",
+						'end_date' => "2014-06-20",
+						'teachers' => array("Jérôme", "Cédric", "Arnaud"),
+						'locale' => 'fr_FR',
+						),
+		'creteil_intermediaires_2013' => array('belts' => array('verte', 'bleue'),
+						'name' => "Intermédiaires Créteil 2013-2014",
+                				'days_of_week' => array(2,5),
+                				'start_date' => "2013-09-10",
+						'end_date' => "2014-06-20",
+						'teachers' => array("Jérôme", "Cédric", "Arnaud"),
+						'locale' => 'fr_FR',
+						),
+		'creteil_debutants_2013' => array('belts' => array('jaune', 'orange'),
+						'name' => "Débutants Créteil 2013-2014",
+                				'days_of_week' => array(2,4),
+                				'start_date' => "2013-09-10",
+						'end_date' => "2014-06-20",
+						'teachers' => array("Jérôme", "Cédric", "Arnaud"),
+						'locale' => 'fr_FR',
+						),
+				);

@@ -1,0 +1,450 @@
+{
+"jaune" :
+	{
+	"fr": "jaune",
+	"en": "yellow",
+	"techniques" :
+		{
+		"roulade_avant_droite" :
+			{
+			"fr" : "Roulade avant épaule droite"
+			},
+		"roulade_arriere_gauche" :
+			{
+			"fr" : "Roulade arrière épaule gauche"
+			},
+		"chute_avant" :
+			{
+			"fr" : "chute avant"
+			},
+		"chute_arriere" :
+			{
+			"fr" : "chute arrière"
+			},
+		"chute_cote" :
+			{
+			"fr" : "chute coté"
+			},
+		"position_garde" :
+			{
+			"fr" : "position de garde"
+			},
+		"poings_directs_deplacement" :
+			{
+			"fr" : "coups de poing directs en déplacement"
+			},
+		"poings_directs_bas" :
+			{
+			"fr" : "coups de poing directs en bas"
+			},
+		"coudes" :
+			{
+			"fr" : "coups de coude"
+			},
+		"marteaux" :
+			{
+			"fr" : "coups du marteau"
+			},
+		"arrêt_paume" :
+			{
+			"fr" : "arrêt avec la paume"
+			},
+		"pieds_direct" :
+			{
+			"fr" : "coups de pied direct"
+			},
+		"pieds_circulaire" :
+			{
+			"fr" : "coups de pied circulaire"
+			},
+		"pieds_cote" :
+			{
+			"fr" : "coups de pied de coté"
+			},
+		"pieds_direct_arriere" :
+			{
+			"fr" : "coups de pied direct arrière"
+			},
+		"genoux" :
+			{
+			"fr" : "coups de genou"
+			},
+		"parade_contre_poing" :
+			{
+			"fr" : "parade contre sur direct poing"
+			},
+		"360" :
+			{
+			"fr" : "360 degrés"
+			},
+		"degagement_etranglement_avant" :
+			{
+			"fr" : "dégagement d'étranglement avant"
+			},
+		"degagement_etranglement_arriere" :
+			{
+			"fr" : "dégagement d'étranglement arrière"
+			},
+		"degagement_collier" :
+			{
+			"fr" : "degagement de collier"
+			},
+		"utilisation_objets" :
+			{
+			"fr" : "utilisation d'objets sur place"
+			},
+		"shadow" :
+			{
+			"fr" : "Shadow"
+			}
+		}
+	},
+"orange" :
+	{
+	"fr": "orange",
+	"en": "orange",
+	"techniques" :
+		{
+		"chute_arriere_hauteur" :
+			{
+			"fr" : "chute arrière en hauteur"
+			},
+		"chute_arriere_hauteur" :
+			{
+			"fr" : "chute volte face"
+			},
+		"chute_cote_hauteur" :
+			{
+			"fr" : "chute coté hauteur"
+			},
+		"roulade_avant_gauche" :
+			{
+			"fr" : "roulade avant épaule gauche"
+			},
+		"roulade_arriere_droite" :
+			{
+			"fr" : "roulade arrière épaule droite"
+			},
+		"crochets" :
+			{
+			"fr" : "crochets"
+			},
+		"marteaux" :
+			{
+			"fr" : "marteaux"
+			},
+		"uppercuts" :
+			{
+			"fr" : "uppercuts"
+			},
+		"poing_revers" :
+			{
+			"fr" : "poing revers"
+			},
+		"parades_diverses_poings" :
+			{
+			"fr" : "parades diverses sur poings"
+			},
+		"coup_pied_defense" :
+			{
+			"fr" : "coup de pied de defense"
+			},
+		"coup_pied_arriere_uppercut" :
+			{
+			"fr" : "coup de pied arrière uppercut"
+			},
+		"coups_pied_chasses" :
+			{
+			"fr" : "coup de pieds pas chassé"
+			},
+		"coups_pied_glisses" :
+			{
+			"fr" : "coup de pieds pas glissé"
+			},
+		"esquives" :
+			{
+			"fr" : "esquives"
+			},
+		"degagements_prises_mains" :
+			{
+			"fr" : "dégagements de prises de mains"
+			},
+		"degagement_etranglement_avant_pousse" :
+			{
+			"fr" : "dégagement étranglement avant poussé"
+			},
+		"degagement_etranglement_arriere_pousse" :
+			{
+			"fr" : "dégagement étranglement arrière poussé"
+			},
+		"degagement_etranglement_arriere_tire" :
+			{
+			"fr" : "dégagement étranglement arrière tiré"
+			}
+		}
+	},
+"verte" :
+	{
+	"fr": "verte",
+	"en": "green",
+	"techniques" :
+		{
+		"roulade_plombee" :
+			{
+			"fr" : "Roulade plombée"
+			},
+		"roulade_coté" :
+			{
+			"fr" : "Roulade coté"
+			},
+		"roulade_judo" :
+			{
+			"fr" : "Roulade judo"
+			},
+		"coups_pied_gifle" :
+			{
+			"fr" : "coups de pied gifle"
+			},
+		"circulaire_arriere_talon" :
+			{
+			"fr" : "circulaire arrière talon"
+			},
+		"pieds_direct_arriere" :
+			{
+			"fr" : "coup pied direct arrière"
+			},
+		"pieds_ciseau" :
+			{
+			"fr" : "coup pied direct sauté ciseau"
+			},
+		"pieds_arrière_retourné" :
+			{
+			"fr" : "coup pieds arrière retournés"
+			},
+		"parades_coup_poing" :
+			{
+			"fr" : "parades coup de poing"
+			},
+		"parades_gauche_droite" :
+			{
+			"fr" : "parades gauche droite"
+			},
+		"parades_circulaires_haut" :
+			{
+			"fr" : "parades circulaires hauts"
+			},
+		"degagements_etrainte_avant" :
+			{
+			"fr" : "degagements etreinte avant"
+			},
+		"degagements_etrainte_arrière" :
+			{
+			"fr" : "degagements etreinte arrière"
+			},
+		"degagements_prise_cheveux" :
+			{
+			"fr" : "degagements prise cheveux"
+			},
+		"pontage" :
+			{
+			"fr" : "pontage"
+			},
+		"degagement_etranglement_sol" :
+			{
+			"fr" : "degagements étranglement au sol"
+			},
+		"degagement_etranglement_sol_cote" :
+			{
+			"fr" : "degagements étranglement au sol coté"
+			},
+		"degagements_saisies_mains" :
+			{
+			"fr" : "dégagements saisies mains 2 personnes"
+			}
+		}
+	},
+"bleue" :
+	{
+	"fr": "bleue",
+	"en": "blue",
+	"techniques" :
+		{
+		"chute_avant_bleue" :
+			{
+			"fr" : "chute avant bleue"
+			},
+		"fauchages" :
+			{
+			"fr" : "fauchages"
+			},
+		"projections" :
+			{
+			"fr" : "projections"
+			},
+		"coup_tranchant" :
+			{
+			"fr" : "coup tranchant de la main"
+			},
+		"cacato" :
+			{
+			"fr" : "coup pied talon haut->bas"
+			},
+		"parades_direct_poing_coté" :
+			{
+			"fr" : "parades direct poing de coté"
+			},
+		"parades_direct_pied_coté" :
+			{
+			"fr" : "parades direct pied de coté"
+			},
+		"parades_circulaires" :
+			{
+			"fr" : "parades circulaires"
+			},
+		"cle_poignet" :
+			{
+			"fr" : "clé au poignet"
+			},
+		"differentes_saisies_couteau" :
+			{
+			"fr" : "différentes saisies couteau"
+			},
+		"couteaux_distances" :
+			{
+			"fr" : "couteaux a distance"
+			},
+		"couteau_pique" :
+			{
+			"fr" : "couteau piqué"
+			},
+		"baton_axe" :
+			{
+			"fr" : "baton dans l'axe"
+			},
+		"baton_diagonal" :
+			{
+			"fr" : "baton diagonal"
+			},
+		"baton_cote" :
+			{
+			"fr" : "baton coté"
+			},
+		"baton_bas" :
+			{
+			"fr" : "baton bas"
+			},
+		"degagements_veste" :
+			{
+			"fr" : "degagements prise veste"
+			}
+		}
+	},
+"marron" :
+	{
+	"fr": "marron",
+	"en": "brown",
+	"techniques" :
+		{
+		"ench_pieds" :
+			{
+			"fr" : "Enchaînements de deux coups de pied"
+			},
+		"pieds_genous_sautes" :
+			{
+			"fr" : "Coups de pieds et de genou sautés"
+			},
+		"ench_pieds_sautes" :
+			{
+			"fr" : "enchainements directs/circulaires retournés / sautés"
+			},
+		"couteau_pique" :
+			{
+			"fr" : "couteau en piqué"
+			},
+		"couteau_croise" :
+			{
+			"fr" : "couteau croisé"
+			},
+		"baton_pique" :
+			{
+			"fr" : "bâton en piqué"
+			},
+		"pisto_devant" :
+			{
+			"fr" : "pistolet devant"
+			},
+		"pisto_derriere" :
+			{
+			"fr" : "pistolet derrière"
+			},
+		"pisto_cote_devant" :
+			{
+			"fr" : "pistolet coté devant"
+			},
+		"pisto_cote_derriere" :
+			{
+			"fr" : "pistolet coté derrière"
+			},
+		"clef_bec_canne" :
+			{
+			"fr" : "degagement clef \"bec de canne\""
+			},
+		"etreintes_poussees" :
+			{
+			"fr" : "degagements etreintes poussées"
+			},
+		"colliers" :
+			{
+			"fr" : "degagements collier"
+			},
+		"double_nelson" :
+			{
+			"fr" : "double nelson"
+			},
+		"couteau_angles_divers" :
+			{
+			"fr" : "couteau angles divers"
+			},
+		"baton_angles_divers" :
+			{
+			"fr" : "baton angles divers"
+			},
+		"parades_contres" :
+			{
+			"fr" : "parades/contre diverses"
+			}
+		}
+	},
+"noire" :
+	{
+	"fr": "noire",
+	"en": "black",
+	"techniques" :
+		{
+		"uv1" :
+			{
+			"fr" : "UV1"
+			},
+		"uv2" :
+			{
+			"fr" : "UV2"
+			},
+		"uv3" :
+			{
+			"fr" : "UV3"
+			},
+		"uv4" :
+			{
+			"fr" : "UV4"
+			},
+		"uv5" :
+			{
+			"fr" : "UV5"
+			},
+		"uv6" :
+			{
+			"fr" : "UV6"
+			}
+		}
+	}
+}
