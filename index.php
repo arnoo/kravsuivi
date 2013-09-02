@@ -3,6 +3,8 @@
 if (!defined('DOKU_COOKIE')) define('DOKU_COOKIE', 'DW'.md5('kravcookiewiki'));
 session_name("DokuWiki");
 @session_start();
+header("Content-type: text/html; charset=UTF-8");
+
 if (!isset($_SESSION[DOKU_COOKIE]) || !isset($_SESSION[DOKU_COOKIE]['auth']))
 	{
 	print "Vous devez être connecté via le wiki pour accéder à cette page.";

@@ -153,5 +153,5 @@ function update_teachers(comment_button)
 			teachers_long.push(t);
 			}
 		}		
-	$(teachers_td).text(teachers_short.join(", ")).attr("title", teachers_long.join(", "));
+	$(teachers_td).html(teachers_short.join(", ")+"&nbsp;").attr("title", teachers_long.join(", "));
 	}

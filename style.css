@@ -3,6 +3,12 @@ html, body
 	width: 100%;
 	padding: 0;
 	margin: 0;
+	font-family:	'Verdana', sans-serif;
+	}
+
+body
+	{
+	margin-top: 20px;
 	}
 
 h1
@@ -16,6 +22,11 @@ h1
 	background-repeat: no-repeat;
 	background-position: 10px 50%;
 	font-size: 30px;
+	}
+
+td
+	{
+	font-size: 15px;
 	}
 
 #main_table, #head_table
@@ -32,6 +43,14 @@ h1
 	border-top: 1px solid #ccc;
 	padding:10px;
 	width:50px;
+	}
+
+#main_table tr:first-child td,
+#main_table tr:first-child th,
+#head_table tr:first-child td,
+#head_table tr:first-child th
+	{
+	border: none;
 	}
 
 #main_table td.future,
@@ -52,7 +71,7 @@ h1
 #outer_head
 	{
 	position:relative;
-	height: 210px;
+	height: 195px;
 	}
 
 #outer_main

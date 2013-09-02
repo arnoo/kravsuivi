@@ -129,7 +129,7 @@
 			{
 			"fr" : "crochets"
 			},
-		"marteaux" :
+		"marteaux_orange" :
 			{
 			"fr" : "marteaux"
 			},
@@ -155,11 +155,11 @@
 			},
 		"coups_pied_chasses" :
 			{
-			"fr" : "coup de pieds pas chassé"
+			"fr" : "coup de pied pas chassé"
 			},
 		"coups_pied_glisses" :
 			{
-			"fr" : "coup de pieds pas glissé"
+			"fr" : "coup de pied pas glissé"
 			},
 		"esquives" :
 			{
@@ -351,7 +351,7 @@
 			},
 		"pieds_genous_sautes" :
 			{
-			"fr" : "Coups de pieds et de genou sautés"
+			"fr" : "Coups de pied et de genou sautés"
 			},
 		"ench_pieds_sautes" :
 			{
