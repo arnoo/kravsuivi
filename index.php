@@ -48,7 +48,7 @@ function teacher_unique_name($teacher)
 
 	$matches = 999;
 	$uname = '';
-	while ($matches > 1)
+	while (($matches > 1) && (strlen($uname)<strlen($teacher)))
 		{
 		$uname = ucfirst(substr($teacher, 0, strlen($uname)+1));
 		$matches = 0;
