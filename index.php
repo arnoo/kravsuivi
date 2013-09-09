@@ -5,12 +5,12 @@ session_name("DokuWiki");
 @session_start();
 header("Content-type: text/html; charset=UTF-8");
 
-if (!isset($_SESSION[DOKU_COOKIE]) || !isset($_SESSION[DOKU_COOKIE]['auth']))
-	{
-	print "Vous devez être connecté via le wiki pour accéder à cette page.";
-	print "<a href='http://wiki.ekmc.fr/'>Retour au wiki</a>";
-	die;
-	}
+#if (!isset($_SESSION[DOKU_COOKIE]) || !isset($_SESSION[DOKU_COOKIE]['auth']))
+#	{
+#	print "Vous devez être connecté via le wiki pour accéder à cette page.";
+#	print "<a href='http://wiki.ekmc.fr/'>Retour au wiki</a>";
+#	die;
+#	}
 
 require_once('config.php');
 

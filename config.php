@@ -1,6 +1,7 @@
 <?php
 
-$all_teachers = array("Arnaud", "Cédric", "Cédrico", "Jérôme", "Léo", "Mario", "Séna", "Tefy", "Véronique"),
+$teachers_creteil = array("Arnaud", "Cédric", "Driko", "Jérôme", "Léo", "Mario", "Séna", "Tefy", "Véronique");
+$teachers_bodyvip = array("Arnaud", "Cédric", "Driko", "Greg", "Jérôme", "Léo", "Mario", "Séna", "Tefy", "Véronique");
 
 $lessons = array(
 		'creteil_confirmes_2013' => array('belts' => array('marron', 'noire'),
@@ -8,7 +9,7 @@ $lessons = array(
                 				'days_of_week' => array(2,4),
                 				'start_date' => "2013-09-10",
 						'end_date' => "2014-06-20",
-						'teachers' => $all_teachers,,
+						'teachers' => $teachers_creteil,
 						'locale' => 'fr_FR',
 						),
 		'creteil_intermediaires_2013' => array('belts' => array('verte', 'bleue'),
@@ -16,7 +17,7 @@ $lessons = array(
                 				'days_of_week' => array(2,5),
                 				'start_date' => "2013-09-10",
 						'end_date' => "2014-06-20",
-						'teachers' => $all_teachers,
+						'teachers' => $teachers_creteil,
 						'locale' => 'fr_FR',
 						),
 		'creteil_debutants_2013' => array('belts' => array('jaune', 'orange'),
@@ -24,7 +25,7 @@ $lessons = array(
                 				'days_of_week' => array(2,4),
                 				'start_date' => "2013-09-10",
 						'end_date' => "2014-06-20",
-						'teachers' => $all_teachers,
+						'teachers' => $teachers_creteil,
 						'locale' => 'fr_FR',
 						),
 		'beuvin_2013' => array('belts' => array('jaune', 'orange'),
@@ -32,7 +33,7 @@ $lessons = array(
                 				'days_of_week' => array(3),
                 				'start_date' => "2013-09-10",
 						'end_date' => "2014-06-20",
-						'teachers' => $all_teachers,
+						'teachers' => $teachers_creteil,
 						'locale' => 'fr_FR',
 						),
 		'bodyvip_confirmes_2013' => array('belts' => array('marron', 'noire'),
@@ -40,7 +41,7 @@ $lessons = array(
                 				'days_of_week' => array(3,6),
                 				'start_date' => "2013-09-10",
 						'end_date' => "2014-06-20",
-						'teachers' => $all_teachers,
+						'teachers' => $teachers_bodyvip,
 						'locale' => 'fr_FR',
 						),
 		'bodyvip_intermediaires_2013' => array('belts' => array('verte', 'bleue'),
@@ -48,7 +49,7 @@ $lessons = array(
                 				'days_of_week' => array(2,3,6),
                 				'start_date' => "2013-09-10",
 						'end_date' => "2014-06-20",
-						'teachers' => $all_teachers,
+						'teachers' => $teachers_bodyvip,
 						'locale' => 'fr_FR',
 						),
 		'bodyvip_debutants_2013' => array('belts' => array('jaune', 'orange'),
@@ -56,7 +57,7 @@ $lessons = array(
                 				'days_of_week' => array(2,3,6),
                 				'start_date' => "2013-09-10",
 						'end_date' => "2014-06-20",
-						'teachers' => $all_teachers,
+						'teachers' => $teachers_bodyvip,
 						'locale' => 'fr_FR',
 						),
 				);
