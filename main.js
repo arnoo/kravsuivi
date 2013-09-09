@@ -136,7 +136,8 @@ $(document).ready(function ()
 			{
 			update_height();
 			$(".button_comment").each(function () {update_teachers(this);});
-			$(window).resize(update_height);
+			$(window).resize(update_height)
+				 .bind("beforeunload", check_before_unload);
 			});
 
 function update_teachers(comment_button)
@@ -154,4 +155,12 @@ function update_teachers(comment_button)
 			}
 		}		
 	$(teachers_td).html(teachers_short.join(", ")+"&nbsp;").attr("title", teachers_long.join(", "));
+	}
+
+function check_before_unload()
+	{
+	for (c in changes)
+		{
+		return "Vous avez peut-être des changements non sauvegardés. Êtes-vous sur de vouloir quitter la page ?";
+		}
 	}
