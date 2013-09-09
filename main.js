@@ -129,7 +129,7 @@ $(".inner").scroll(function (evt)
 function update_height()
 	{
 	var height = $(window).height();
-	$("#outer_main").height((height-300)+"px");
+	$("#outer_main").height((height-310)+"px");
 	}
 
 $(document).ready(function ()

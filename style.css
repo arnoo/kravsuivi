@@ -24,16 +24,16 @@ h1
 	font-size: 30px;
 	}
 
-td
+td, th
 	{
-	font-size: 15px;
+	font-size: 14px;
 	}
 
 #main_table, #head_table
 	{
 	table-layout: fixed;
 	width: 100%;
-	*margin-left: -150px;/*ie7*/
+	*margin-left: -200px;/*ie7*/
 	}
 
 #main_table td, #main_table th,
@@ -65,13 +65,14 @@ td
 	position:absolute;
 	*position: relative; /*ie7*/
 	left:0;
-	width:200px;
+	width:190px;
+	padding-right: 20px;
 	}
 
 #outer_head
 	{
 	position:relative;
-	height: 195px;
+	height: 205px;
 	}
 
 #outer_main
@@ -86,7 +87,7 @@ td
 	overflow-x:scroll;
 	overflow-y:hidden;
 	width:80%;
-	margin-left:200px;
+	margin-left:215px;
 	}
 
 .button_comment
