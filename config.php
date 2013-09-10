@@ -28,7 +28,7 @@ $lessons = array(
 						'teachers' => $teachers_creteil,
 						'locale' => 'fr_FR',
 						),
-		'beuvin_2013' => array('belts' => array('jaune', 'orange'),
+		'beuvin_2013' => array('belts' => array('jaune', 'orange', 'verte', 'bleue', 'marron', 'noire'),
 						'name' => "Beuvin 2013-2014",
                 				'days_of_week' => array(3),
                 				'start_date' => "2013-09-10",
