@@ -76,6 +76,8 @@ $("div.technique").click(function (evt)
 					}
 				$(this).toggleClass("checked");
 				changes["techniques"][techid][$(this).data("day")] = $(this).hasClass("checked");
+				var count = $("#count_"+techid);
+				count.text(1*count.text()+($(this).hasClass("checked") ? 1 : -1));
 				});
 
 $("input.teacher").change(function (evt)

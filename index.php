@@ -223,26 +223,29 @@ foreach ($lesson['belts'] as $belt)
 	{
 	foreach ($belt_techniques[$belt]['techniques'] as $technique_id => $technique)
 		{
-		print "<tr><th>";
-		print "<div style='float:left; width:10px; background-color:".$belt_techniques[$belt]['en'].";'>&nbsp;</div>";
-		print $technique['fr'];
-		print "</th>";
+		$before_count = "<tr><th>";
+		$before_count .= "<div style='float:left; width:10px; background-color:".$belt_techniques[$belt]['en'].";'>&nbsp;</div>";
+		$before_count .= "<div class='technique_count' id='count_$technique_id'>";
+		$after_count = "</div>".$technique['fr']."</th>";
+		$count = 0;
 		foreach($lesson_ids as $lesson_id)
 			{
 			$stmt_technique = $db->prepare($sql_technique);
 			$stmt_technique->bindValue(':techid', $technique_id);
 			$stmt_technique->bindValue(':day', $lesson_id);
 			$result_technique = $stmt_technique->execute();
-			print "<td>";
-			print "<div data-technique_id='$technique_id' data-day='$lesson_id' class='technique";
+			$after_count .= "<td>";
+			$after_count .= "<div data-technique_id='$technique_id' data-day='$lesson_id' class='technique";
 			if ($result_technique->fetchArray())
 				{
-				print " checked";
+				$after_count .= " checked";
+				$count++;
 				}
-			print "'>&nbsp;</div>";
-			print "</td>";
+			$after_count .= "'>&nbsp;</div>";
+			$after_count .= "</td>";
 			}
-		print "</tr>\n";
+		$after_count .= "</tr>\n";
+		print $before_count.$count.$after_count;
 		}
 	}
 print "</table></div></div>\n";

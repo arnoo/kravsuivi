@@ -161,3 +161,14 @@ button#save_changes
 	float:	right;
 	margin-right: 30px;
 	}
+
+div.technique_count
+	{
+	float:		right;
+	font-size:	12px;
+	font-weight:	normal;
+	border: 	1px solid #000000;
+	border-radius:	3px;
+	padding-left:	2px;
+	padding-right:	2px;
+	}
