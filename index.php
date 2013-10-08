@@ -135,7 +135,6 @@ $belt_techniques = json_decode(file_get_contents("belts.json"), true);
 <html>
 	<head>
 		<title><?php echo $lesson['name']; ?></title>
-		<script src="jquery-1.7.1.js"></script>
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
@@ -270,4 +269,5 @@ print substr($teachers_string, 0, strlen($teachers_string)-2);
 };
 </script>
 
+<script src="jquery-1.7.1.min.js"></script>
 <script type='text/javascript' src='main.js'></script>
