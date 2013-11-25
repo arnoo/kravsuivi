@@ -140,6 +140,11 @@ $(document).ready(function ()
 			$(".button_comment").each(function () {update_teachers(this);});
 			$(window).resize(update_height)
 				 .bind("beforeunload", check_before_unload);
+			var before = $(".future:first").prevAll().length;
+			if (before>5)
+				{
+				$('#inner_main').scrollLeft(before*70-$('#inner_main').width()+180);
+				}
 			});
 
 function update_teachers(comment_button)
