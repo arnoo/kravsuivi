@@ -134,16 +134,18 @@ $belt_techniques = json_decode(file_get_contents("belts.json"), true);
 ?>
 <html>
 	<head>
+		<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<title><?php echo $lesson['name']; ?></title>
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
-	<button id='save_changes'>Sauvegarder les changements</button>
-	<h1>Suivi des cours : <?php echo $lesson['name']; ?></h1>
+	<button id='save_changes'>Sauvegarder<span class="hideonsmallscreen"> les changements</span></button>
+	<h1><span class='hideonsmallscreen'>Suivi : </span><?php echo $lesson['name']; ?></h1>
 
 	<div id='outer_head'><div id='inner_head' class='inner'>
 	<table id="head_table"><thead>
-		<tr><th></th>
+		<tr id='tr_dates'><th></th>
 <?php
 
 function teachers_day($day)
@@ -187,7 +189,7 @@ for ($i=0; $i<365; $i++)
 		}
 	}
 print "</tr>";
-print "<tr><th>Profs</th>";
+print "<tr id='tr_teachers'><th>Profs</th>";
 foreach($lesson_ids as $lesson_id)
 	{
 	print "<td id='teachers_$lesson_id'>&nbsp;</td>";

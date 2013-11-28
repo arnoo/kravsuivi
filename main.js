@@ -128,23 +128,30 @@ $(".inner").scroll(function (evt)
 			syncing_scroll = false;
 			});
 
-function update_height()
+
+function update_dimensions()
 	{
 	var height = $(window).height();
-	$("#outer_main").height((height-310)+"px");
+	var small_screen_p = ($(window).width()<=480);
+	$("#outer_main").height((height-(small_screen_p ? 160 : 310))+"px");
+	if (small_screen_p)
+		{
+		$(".hideonsmallscreen").hide();
+		}
+	else
+		{
+		$(".hideonsmallscreen").show();
+		}
 	}
 
 $(document).ready(function ()
 			{
-			update_height();
+			update_dimensions();
 			$(".button_comment").each(function () {update_teachers(this);});
-			$(window).resize(update_height)
+			$(window).resize(update_dimensions)
 				 .bind("beforeunload", check_before_unload);
 			var before = $(".future:first").prevAll().length;
-			if (before>5)
-				{
-				$('#inner_main').scrollLeft(before*70-$('#inner_main').width()+180);
-				}
+			$('#inner_main').scrollLeft(before*70+25-$('#inner_main').width()/2);
 			});
 
 function update_teachers(comment_button)
