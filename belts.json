@@ -73,6 +73,14 @@
 			{
 			"fr" : "parade contre sur direct poing"
 			},
+		"parade_contre_direct_corps" :
+			{
+			"fr" : "parade contre sur direct au corps"
+			},
+		"parade_contre_pied_bas" :
+			{
+			"fr" : "parade contre sur coup de pied bas"
+			},
 		"360" :
 			{
 			"fr" : "360 degrés"
@@ -84,6 +92,10 @@
 		"degagement_etranglement_arriere" :
 			{
 			"fr" : "dégagement d'étranglement arrière"
+			},
+		"degagement_etranglement_cote" :
+			{
+			"fr" : "dégagement d'étranglement de coté"
 			},
 		"degagement_collier" :
 			{
