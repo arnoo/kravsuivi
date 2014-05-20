@@ -121,7 +121,7 @@
 			{
 			"fr" : "chute arrière en hauteur"
 			},
-		"chute_arriere_hauteur" :
+		"chute_volte_face" :
 			{
 			"fr" : "chute volte face"
 			},
@@ -152,6 +152,10 @@
 		"poing_revers" :
 			{
 			"fr" : "poing revers"
+			},
+		"parades_diverses_pieds" :
+			{
+			"fr" : "parades diverses sur pieds directs"
 			},
 		"parades_diverses_poings" :
 			{
