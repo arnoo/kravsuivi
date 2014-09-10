@@ -59,6 +59,7 @@ $lessons = array(
 						'end_date' => "2015-06-20",
 						'teachers' => $teachers_bodyvip,
 						'locale' => 'fr_FR',
+						),
 
 
 		'creteil_confirmes_2013' => array('belts' => array('marron', 'noire'),
