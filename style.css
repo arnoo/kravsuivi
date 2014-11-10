@@ -131,7 +131,7 @@ div#comment
 	{
 	display: none;
 	position: absolute;
-	width:	400px;
+	width:	440px;
 	height:	330px;
 	z-index: 30;
 	border: 2px solid black;
@@ -180,6 +180,17 @@ div.technique_count
 	padding-left:	2px;
 	padding-right:	2px;
 	}
+
+.nowrap
+	{
+	white-space:nowrap;
+	}
+
+.wrap
+	{
+	white-space:normal;
+	}
+
 
 @media (max-width: 480px)
 	{
