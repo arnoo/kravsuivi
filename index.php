@@ -253,7 +253,7 @@ print "</table></div></div>\n";
 print "<div id='comment'><span id='comment_close'>x</span><h2>Commentaire pour le <span id='comment_date'>22 avril</span></h2><textarea></textarea><h2>Profs</h2>";
 foreach ($lesson['teachers'] as $teacher)
 	{
-	print "<label class='nowrap'><input class='wrap teacher' type='checkbox' name='teachers[]' value='$teacher'>$teacher</label>";
+        print "<label class='nowrap'><input class='teacher' type='checkbox' name='teachers[]' value='$teacher'>$teacher</label> ";
 	}
 "</div>";
 
