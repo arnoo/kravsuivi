@@ -237,6 +237,10 @@
 			{
 			"fr" : "coup pieds arrière retournés"
 			},
+		"parades_coup_pied_direct" :
+			{
+			"fr" : "parades coup de pied direct"
+			},
 		"parades_coup_poing" :
 			{
 			"fr" : "parades coup de poing"
