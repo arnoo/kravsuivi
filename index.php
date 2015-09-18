@@ -205,7 +205,7 @@ foreach ($lesson_ids as $lesson_id)
 	print "<td><div title='Cliquer pour voir/modifier le commentaire' class='button_comment";
 	if ($comm = $result_comment->fetchArray())
 		{
-		print " checked' data-comment='".htmlspecialchars($comm['comment']);
+		print " checked' data-comment='".htmlspecialchars($comm['comment'], ENT_QUOTES|ENT_HTML401);
 		}
 	print "' data-teachers='{";
 	$teachers_for_day = teachers_day($lesson_id);
